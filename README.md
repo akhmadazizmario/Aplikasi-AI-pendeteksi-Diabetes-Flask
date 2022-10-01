@@ -1,10 +1,12 @@
 # Aplikasi-AI-pendeteksi-Diabetes
 
-##################################
-APLIKASI FLASK PENDETEKSI DIABETES
-##################################
+**********************************
 
-Aplikasi Artifical Inteligence Pendeteksi ini saya buat denga Python Flask.
+APLIKASI FLASK PENDETEKSI DIABETES
+
+**********************************
+
+Aplikasi Artifical Inteligence Pendeteksi ini saya buat dengan Python Flask.
 
 ####################
 Versi Module Python
