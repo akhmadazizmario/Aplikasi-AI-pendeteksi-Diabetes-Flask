@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Aplikasi Deteksi Diabetes</title>
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css')}}">
+<div class="content bg-white">
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <h3 class="heading mb-4">HASIL DETEKSI DIABETES ANDA: <i class="fa fa-stethoscope" aria-hidden="true"></i></h3>
+              <br><br>
+
+              <p><img src="{{ url_for('static', filename='images/profil.png')}}" alt="Image" class="img-fluid"></p>
+
+
+            </div>
+            <div class="col-md-6">
+              
+              <form class="bg-white mb-5"action="/" method="POST">
+                <br><br><br><br>
+                <center>
+                {% if finalData == 1 %}
+                  
+                    <span class="form-title text-dark">
+                    <h2 class="text-dark">Gawat kamu <strong class="text-dark">POSITIF DIABETES</strong><br>
+                    segera periksa ke dokter untuk penanganan lebih lanjut.</h2>
+                    </span>
+                 
+                {% else %}
+                
+                <span class="form-title">
+                   <h2 class="text-dark"> Yeay, kamu<strong class="text-dark"> NEGATIF DIABETES</strong></h2>
+                </span>
+                
+                {% endif %}
+               <br><br>
+               <hr color="black" size="20">
+               </center>
+                <!--menginput-->
+                <center>
+                <div class="row">
+                  <div class="col-12">
+                    <a href="/index" class="btn btn-primary bg-danger text-white rounded-0 py-2 px-4">Selesai</a>
+                  </div>
+                </div>
+              </center>
+              <br>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.validate.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+
+{% endblock %}
+
